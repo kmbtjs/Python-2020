@@ -1,0 +1,13 @@
+a= int(input(""))
+adım = 0
+b = True
+while b:
+    if a%2== 0:
+        a= a/2
+        adım+=1
+    elif a%2 == 1:
+        a= a*3+1
+        adım+=1
+    if a == 1:
+        print(adım)
+        b = False
