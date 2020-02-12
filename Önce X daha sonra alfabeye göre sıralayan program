@@ -1,0 +1,17 @@
+listex = []
+liste1 = []
+liste2 = []
+a = True
+while a:
+    isim = input("")
+    liste2.append(isim)
+    if isim.startswith("x"):
+        listex.append(isim)
+    else:
+        liste1.append(isim)
+    if liste2[len(liste2)-1] == "":
+        a = False
+listex.sort()
+liste1.sort()
+liste1.pop(0)
+print(listex+liste1)
