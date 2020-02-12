@@ -1,0 +1,23 @@
+a = input("")
+b = input("")
+if a == "taş":
+    if b == "taş":
+        print("berabere")
+    elif b == "kağıt":
+        print("ikinci oyuncu kazandı")
+    elif b == "makas":
+        print("birinci oyuncu kazandı")
+if a == "kağıt":
+    if b == "kağıt":
+        print("berabere")
+    elif b == "taş":
+        print("birinci oyuncu kazandı")
+    elif b == "makas":
+        print("ikinci oyuncu kazandı")
+if a == "makas":
+    if b == "makas":
+        print("berabere")
+    elif b == "kağıt":
+        print("birinci oyuncu kazandı")
+    elif b == "taş":
+        print("ikinci oyuncu kazandı")
