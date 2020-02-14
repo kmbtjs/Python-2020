@@ -1,0 +1,17 @@
+import sys
+girdi = sys.stdin.read()
+girdi = girdi.lower()
+girdi = girdi.replace('.','')
+girdi = girdi.replace(',','')
+girdi = girdi.replace("'","")
+girdi = girdi.replace("-",' ')
+s=girdi.split(' ')
+sozluk={}
+word=0
+for word in s:
+    if word not in sozluk:
+        sozluk[word] =1
+    else:
+        sozluk[word] += 1
+for anahtar in sorted(sozluk, key=sozluk.get, reverse=True)[:5]:
+    print("%s %s" %( anahtar, sozluk[anahtar]))
