@@ -1,0 +1,37 @@
+def asal(n):
+    """
+    verilen n sayısından küçük asal sayıların listesini döndürür
+    :param n: pozitif tamsayı (>2)
+    :return: liste
+    """
+    asal = [p for p in range(2,n) if all(p%y!=0 for y in range(2,p))]
+    return list(asal)
+    pass
+
+
+def mukemmel(n):
+    """
+    verilen sayının mükemmel sayı olu olmadığını döndürür
+    :param n: pozitif tam sayı (>2)
+    :return: bool tipte True|False
+    """
+    if sum([d for d in range(1,n) if n%d==0])==n:
+        return True
+    else:
+        return False
+    pass
+
+def asal_liste(*args):
+    """
+    değişken sayıda verilen parametrelerin asal olup olmadığını sırasıyla liste olarak döndürür
+    :param args: pozitif tam sayılar (>2)
+    :return: bool listesi
+    """
+    list1 = list()
+    for arg in args:
+        if all(arg%y!=0 for y in range(2,arg)):
+            list1.append(True)
+        else:
+            list1.append(False)
+    return list1
+    pass
