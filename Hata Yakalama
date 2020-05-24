@@ -1,0 +1,18 @@
+total = 0
+
+while True:
+  try:
+    x = input()
+    if x == "":
+      break
+    a1 = float(x)
+    a2 = int(a1)
+    total += 1000/a2
+  except (ZeroDivisionError):
+    #print("ZeroDivisionError")
+    continue
+  except (ValueError):
+    #print("ValueError")
+    continue
+
+print(int(total))
