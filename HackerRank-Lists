@@ -1,0 +1,36 @@
+if __name__ == '__main__':
+    N = int(input())
+arr = list()
+i = 0
+
+for n in range(N):
+    x = input().split(" ")
+    command = x[0]
+    if command == "append":
+        arr.append(int(x[1]))
+    elif command == "insert":
+        arr.insert(int(x[1]), int(x[2]))
+    elif command == "print":
+        print(arr)
+    elif command == "remove":
+        arr.remove(int(x[1]))
+    elif command == "sort":
+        arr.sort()
+    elif command == "pop":
+        arr.pop()
+    elif command == "reverse":
+        arr.reverse()
+#Input HackerRank compiler tarafından sağlanıyor. Kodun denendiği input ise;
+12
+insert 0 5
+insert 1 10
+insert 0 6
+print
+remove 6
+append 9
+append 1
+sort
+print
+pop
+reverse
+print
