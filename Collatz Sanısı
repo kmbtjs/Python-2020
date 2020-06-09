@@ -1,4 +1,4 @@
-a= int(input(""))
+a = int(input(""))
 adım = 0
 b = True
 while b:
